@@ -19,6 +19,15 @@ describe('submitForm() tests', () => {
         nameInput.value = 'yogabba';
         submitForm();
         expect(usernames.length).toBe(1);
-        expect(usernames).toContain('yogabba');
+        
     });
 })
+
+
+// this is called a hook. There are more hooks than just this. 
+afterEach(function() {
+    nameInput.value = ''
+    usernames = [];
+});
+
+// this is a silly example but applies to changes made to a DB after each test, for example
