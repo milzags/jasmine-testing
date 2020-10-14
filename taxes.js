@@ -17,3 +17,11 @@ function removeDupes(values) {
     return arr; 
 }
 
+let usernames = [];
+
+let nameInput = document.getElementById('nameInput');
+
+function submitForm() {
+    usernames.push(nameInput.value);
+}
+

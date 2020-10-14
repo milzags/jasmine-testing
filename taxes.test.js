@@ -14,5 +14,11 @@ it ('should remove duplicates from array', function (){
     expect(removeDupes('hello')).toBe('helo');
 })
 
-
-
+describe('submitForm() tests', () => {
+    it ('saves input val to usernames array', () => {
+        nameInput.value = 'yogabba';
+        submitForm();
+        expect(usernames.length).toBe(1);
+        expect(usernames).toContain('yogabba');
+    });
+})
