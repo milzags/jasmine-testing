@@ -9,4 +9,11 @@ function calculateTaxes(income){
     }
 };
 
-console.log(calculateTaxes(500));
+function removeDupes(values) {
+    const arr = [...new Set(values)];
+    if (typeof values === 'string') {
+        return arr.join('');
+    }
+    return arr; 
+}
+
